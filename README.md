@@ -40,13 +40,13 @@ Particularly looking for contributions to the locale settings of the project, as
 ;; Change sparator
 (sluj "hi mom" :separator "%") ;; => hi%mom
 
-;; Remove based on regexp
-(sluj "hi mom part 2" :remove #"\d") ;; hi-mom-part
-
 ;; Pass the charmap as a argument
 (sluj "I have weird characters ☢ ♥" :charmap {:♥ "heart" :☢ :radiate}) ;; => i-have-weird-characters-radiate-heart
 ;; Alternatively
 (sluj "I have weird characters ♥ ☢" :♥ "heart" :☢ "radiate") ;; => i-have-weird-characters-radiate-heart
+
+;; Change the casing
+(sluj "make me upper" :casing "upper") ;; => MAKE-ME-UPPER
 ```
 ## License
 This project is licensed via the MIT license. Please read through the `LICENSE` file at the root of the project for more information.
