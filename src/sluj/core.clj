@@ -33,6 +33,7 @@
     (-> s
         (string/replace #"[:/?#\[\]@!$&'()*+,;=]" "") ;; Remove any reserved RFC 3986 characters
         (replace-characters charmap) ;; Replace the characters with the charmap characters
-        (extract-words) ;; Extract the words to a list of words
-        (string/join separator) ;; Replace spaces with the separator
-        casing))) ;; Apply the specified casing
+        ;;(extract-words) ;; Extract the words to a list of words
+        ;;(string/join separator) ;; Replace spaces with the separator
+        ;;casing
+        ))) ;; Apply the specified casing
