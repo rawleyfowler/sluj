@@ -13,6 +13,12 @@ This library adheres to the following:
 
 Shout out to [Trott/slug](https://github.com/Trott/slug) for inspiring me to make this over a rainy weekend.
 
+## Clojars
+This project is available on [Clojars](https://clojars.org/com.github.rawleyfowler/sluj/versions/1.0.0), and you can add it to your lein project via:
+```clojure
+[com.github.rawleyfowler/sluj "1.0.0"]
+```
+
 ## Why?
 Currently the most starred Slug clojure project is abandoned by the maintainer, plus it has dependencies. I thought that I could make it better, so I set out on this project.
 
