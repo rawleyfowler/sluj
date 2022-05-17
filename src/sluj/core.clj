@@ -7,7 +7,7 @@
 (defn- replace-characters
   "Replaces any characters in a string that are mapped in the given charmap"
   [s charmap]
-  (string/replace s (re-pattern (string/join "|" (keys charmap)) charmap))
+  (string/replace s (re-pattern (string/join "|" (keys charmap)) charmap)))
 
 (defn- extract-words
   "Extracts words from the string"
