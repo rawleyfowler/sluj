@@ -16,6 +16,11 @@
   [s]
   (re-seq #"\w+" s))
 
+(defn- join-on-separator
+  "Joins a given array with a given separator"
+  [s separator]
+  (string/join separator s))
+
 (defn sluj
   "'Slugifies' a given string s, to make it usable in URI's. Specifically UTF-16 strings."
   [s & {:as opts}]
@@ -34,5 +39,5 @@
         (string/replace #"[:/?#\[\]@!$&'()*+,;=]" "") ;; Remove any reserved RFC 3986 characters
         (replace-characters charmap) ;; Replace the characters with the charmap characters
         (extract-words) ;; Extract the words to a list of words
-        (string/join separator) ;; Replace spaces with the separator
+        (join-on-separator separator) ;; Replace spaces with the separator
         casing))) ;; Apply the specified casing
