@@ -7,9 +7,7 @@
 (defn- replace-characters
   "Replaces any characters in a string that are mapped in the given charmap"
   [s charmap]
-  (let [character-set (set s)
-        characters (filter #(contains? charmap (str %)) character-set)]
-    (string/replace s (re-pattern (string/join "|" characters)) charmap)))
+  (string/replace s (re-pattern (string/join "|" (keys charmap)) charmap))
 
 (defn- extract-words
   "Extracts words from the string"
