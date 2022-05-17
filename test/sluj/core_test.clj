@@ -15,7 +15,10 @@
 (deftest japanese
   (testing "hiragana"
     (is (= (sluj "あなたはばかです") "anatahabakadesu"))
-    (is (= (sluj "せんぱいがすきです") "senpaigasukidesu"))))
+    (is (= (sluj "せんぱいがすきです") "senpaigasukidesu")))
+  (testing "katakana"
+    (is (= (sluj "アナタハバカ") "anatahabaka"))
+    (is (= (sluj "センパイガスキ") "senpaigasuki"))))
 
 (deftest opts
   (testing "Sluggify a given plain text string with custom separator"

@@ -23,15 +23,15 @@
   "'Slugifies' a given string s, to make it usable in URI's. Specifically UTF-16 strings"
   [s & {:as opts}]
   (let [spec-opts '(:locale
-                     :remove
-                     :separator
-                     :casing)
+                    :remove
+                    :separator
+                    :casing)
         locale (get opts :locale "none")
         casing (if (= (keyword (get opts :casing :lower)) :lower)
                  string/lower-case
                  string/upper-case)
         separator (get opts :separator "-") ;; Legal separators: Any ASCII char that we don't replace, down below.
-        charmap (merge c/charmap 
+        charmap (merge c/charmap
                        (w/stringify-keys (apply dissoc (get opts :charmap opts) spec-opts))
                        ((keyword locale) c/locales))]
     (-> s
