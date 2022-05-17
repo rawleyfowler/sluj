@@ -14,6 +14,7 @@ This library adheres to the following:
 Shout out to [Trott/slug](https://github.com/Trott/slug) for inspiring me to make this over a rainy weekend.
 
 ## Clojars
+[![Clojars Project](https://img.shields.io/clojars/v/com.github.rawleyfowler
 This project is available on [Clojars](https://clojars.org/com.github.rawleyfowler/sluj/versions/1.0.1), and you can add it to your lein project via:
 ```clojure
 [com.github.rawleyfowler/sluj "1.0.1"]
