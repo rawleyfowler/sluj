@@ -12,7 +12,7 @@
     (string/replace s (re-pattern (string/join "|" characters)) charmap)))
 
 (defn- extract-words
-  "Extracts from the string"
+  "Extracts words from the string"
   [s]
   (re-seq #"\w+" s))
 
