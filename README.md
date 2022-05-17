@@ -13,6 +13,9 @@ This library adheres to the following:
 
 Shout out to [Trott/slug](https://github.com/Trott/slug) for inspiring me to make this over a rainy weekend.
 
+## Why?
+Currently the most starred Slug clojure project is abandoned by the maintainer, plus it has dependencies. I thought that I could make it better, so I set out on this project.
+
 ## Contributing
 Particularly looking for contributions to the locale settings of the project, as there is no way I could create a locale for every alphabet myself. Also, the library needs a little work in the multi-byte characters department.
 
