@@ -1,6 +1,7 @@
 (ns sluj.core-test
-  (:use clojure.test 
-        sluj.core))
+  (:require
+   [clojure.test :refer [deftest is testing]]
+   [sluj.core :refer [sluj]]))
 
 (deftest basic
   (testing "Sluggify a given plain text string"
@@ -10,6 +11,14 @@
     (is (= (sluj "🧡 epic") "epic"))
     (is (= (sluj "пo pomegranates") "po-pomegranates"))
     (is (= (sluj "маленький подъезд") "malenkij-poduezd"))))
+
+(deftest japanese
+  (testing "hiragana"
+    (is (= (sluj "あなたはばかです") "anatahabakadesu"))
+    (is (= (sluj "せんぱいがすきです") "senpaigasukidesu")))
+  (testing "katakana"
+    (is (= (sluj "アナタハバカ") "anatahabaka"))
+    (is (= (sluj "センパイガスキ") "senpaigasuki"))))
 
 (deftest opts
   (testing "Sluggify a given plain text string with custom separator"
