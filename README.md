@@ -4,7 +4,7 @@ Sluj is a very small library for converting strings of UTF-16 text to slugs. A s
 This library adheres to the following:
 <ul>
     <li>
-        <a href="ttps://datatracker.ietf.org/doc/html/rfc3986">RFC 3986</a>
+        <a href="https://datatracker.ietf.org/doc/html/rfc3986">RFC 3986</a>
     </li>
     <li>
         Dependency-less
@@ -14,7 +14,7 @@ This library adheres to the following:
 Shout out to [Trott/slug](https://github.com/Trott/slug) for inspiring me to make this over a rainy weekend.
 
 ## Contributing
-I will absolutely be accepting any contributions to this project. I am particularly looking for contributions to the locale settings of the project, as there is no way I could create a locale for every alphabet myself.
+Particularly looking for contributions to the locale settings of the project, as there is no way I could create a locale for every alphabet myself. Also, the library needs a little work in the multi-byte characters department.
 
 ## Examples
 ```clojure
