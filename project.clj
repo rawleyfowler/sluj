@@ -1,4 +1,4 @@
-(defproject sluj "0.1.0-SNAPSHOT"
+(defproject sluj "1.0.0"
   :description "Sluj, the small Slug creation tool."
   :url "https://github.com/rawleyfowler/sluj"
   :license {:name "MIT"
