@@ -7,6 +7,7 @@
     (is (= (sluj "My name is mud") "my-name-is-mud"))
     (is (= (sluj "My name is definitley mud!") "my-name-is-definitley-mud")))
   (testing "Sluggify a given string with exotic UTF characters"
+    (is (= (sluj "🧡 epic") "epic"))
     (is (= (sluj "пo pomegranates") "po-pomegranates"))
     (is (= (sluj "маленький подъезд") "malenkij-poduezd"))))
 
