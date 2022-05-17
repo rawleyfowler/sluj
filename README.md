@@ -4,7 +4,7 @@ Sluj is a very small library for converting strings of UTF-16 text to slugs. A s
 This library adheres to the following:
 <ul>
     <li>
-        [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986)
+        <a href="ttps://datatracker.ietf.org/doc/html/rfc3986">RFC 3986 </a>h
     </li>
     <li>
         Dependency-less
