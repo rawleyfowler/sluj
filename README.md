@@ -30,7 +30,7 @@ Particularly looking for contributions to the locale settings of the project, as
 (sluj "I ♥ Unicode!" :♥ "love") ;; => i-love-unicode
 
 (sluj "Turn this ship 200°!") ;; => turn-this-ship-200
-(sluj "Turn this ship 200°!" :° "degrees") ;; => turn-this-ship-200-degrees
+(sluj "Turn this ship 200 °!" :° "degrees") ;; => turn-this-ship-200-degrees
 
 ;; Non english characters
 ;; These were made with google translate, sorry in advanced.
