@@ -1,5 +1,5 @@
 # Sluj
-Sluj is a very small library for converting strings of UTF-16 text to slugs. A slug is a piece of text that is URL safe. This is particularly useful for blogs!
+Sluj is a very small library for converting strings of UTF-16 text to slugs. A slug is a piece of text that is URL safe. Sluj can translate a wide variety of characters, including but not limited to cyrillic, and japanese characters.
 
 This library adheres to the following:
 <ul>
