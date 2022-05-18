@@ -21,16 +21,14 @@
 
 (defn sluj
   "'Slugifies' a given string s, to make it usable in URI's. Specifically UTF-16 strings"
-  [s & {:as opts}]
-  (let [spec-opts '(:locale
-                    :remove
-                    :separator
-                    :casing)
-        locale (get opts :locale "none")
-        casing (if (= (keyword (get opts :casing :lower)) :lower)
+  ;; Credits to u/MartinPuda on Reddit for reminding me I can destructure
+  [s & {:keys [locale separator casing]
+        :or {locale "none" separator "-" casing "lower"}
+        :as opts}]
+  (let [spec-opts [:locale :remove :separator :casing]
+        casing-fn (if (= (keyword casing) :lower)
                  string/lower-case
                  string/upper-case)
-        separator (get opts :separator "-") ;; Legal separators: Any ASCII char that we don't replace, down below.
         charmap (merge c/charmap
                        (w/stringify-keys (apply dissoc (get opts :charmap opts) spec-opts))
                        ((keyword locale) c/locales))]
@@ -39,4 +37,4 @@
         (replace-characters charmap) ;; Replace the characters with the charmap characters
         (extract-words) ;; Extract the words to a list of words
         (join-on-separator separator) ;; Replace spaces with the separator
-        casing))) ;; Apply the specified casing
+        casing-fn))) ;; Apply the specified casing
