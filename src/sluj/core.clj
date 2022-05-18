@@ -1,9 +1,10 @@
+;; Copyright Rawley Fowler & Contributors.
+;; https://github.com/rawleyfowler/sluj
 (ns sluj.core
   (:require [sluj.charmap :as c]
             [clojure.string :as string]
             [clojure.walk :as w]))
 
-;; How about instead we setify the map characters, and then apply replacements to any non ascii chars. This will be way more performant.
 (defn- replace-characters
   "Replaces any characters in a string that are mapped in the given charmap"
   [s charmap]
