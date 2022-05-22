@@ -1,4 +1,4 @@
-(defproject com.github.rawleyfowler/sluj "1.0.1"
+(defproject com.github.rawleyfowler/sluj "1.0.2"
   :description "Sluj, the small but mighty slug creation library for Clojure."
   :url "https://github.com/rawleyfowler/sluj"
   :license {:name "MIT"
