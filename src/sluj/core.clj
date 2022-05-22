@@ -10,16 +10,6 @@
   [s charmap]
   (string/replace s (re-pattern (string/join "|" (keys charmap))) charmap))
 
-(defn- extract-words
-  "Extracts words from the string"
-  [s]
-  (re-seq #"\w+" s))
-
-(defn- join-on-separator
-  "Joins a given array with a given separator"
-  [s separator]
-  (string/join separator s))
-
 (defn sluj
   "'Slugifies' a given string s, to make it usable in URI's. Specifically UTF-16 strings"
   ;; Credits to u/MartinPuda on Reddit for reminding me I can destructure
@@ -36,6 +26,7 @@
     (-> s
         (string/replace #"[:/?#\[\]@!$&'()*+,;=]" "") ;; Remove any reserved RFC 3986 characters
         (replace-characters charmap) ;; Replace the characters with the charmap characters
-        (extract-words) ;; Extract the words to a list of words
-        (join-on-separator separator) ;; Replace spaces with the separator
+        (->>
+         (re-seq #"\w+") ;; Separate the words into a list
+         (string/join separator)) ;; Join the words back with the separator
         casing-fn))) ;; Apply the specified casing
