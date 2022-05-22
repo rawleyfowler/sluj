@@ -18,8 +18,8 @@
         :as opts}]
   (let [spec-opts [:locale :remove :separator :casing]
         casing-fn (if (= (keyword casing) :lower)
-                 string/lower-case
-                 string/upper-case)
+                    string/lower-case
+                    string/upper-case)
         charmap (merge c/charmap
                        (w/stringify-keys (apply dissoc (get opts :charmap opts) spec-opts))
                        ((keyword locale) c/locales))]
