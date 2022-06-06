@@ -54,7 +54,7 @@ Particularly looking for contributions to the locale settings of the project, as
 ;; Pass the charmap as a argument
 (sluj "I have weird characters ☢ ♥" :charmap {:♥ "heart" :☢ :radiate}) ;; => i-have-weird-characters-radiate-heart
 ;; Alternatively
-(sluj "I have weird characters ♥ ☢" :♥ "heart" :☢ "radiate") ;; => i-have-weird-characters-radiate-heart
+(sluj "I have weird characters ☢ ♥" :♥ "heart" :☢ "radiate") ;; => i-have-weird-characters-radiate-heart
 
 ;; Change the casing
 (sluj "make me upper" :casing "upper") ;; => MAKE-ME-UPPER
